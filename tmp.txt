@@ -1,4 +1,0 @@
-foo
-foobar
-change two
-change one
