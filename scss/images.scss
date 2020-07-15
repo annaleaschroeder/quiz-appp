@@ -1,4 +1,27 @@
-.image__profile {
-  height: 50%;
-  width: auto;
+.profile {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &__image {
+    height: 150px;
+    width: auto;
+    border-radius: 50%;
+  }
+  &__name {
+    font-size: 80%;
+  }
+}
+
+.bio {
+  border: 1px solid transparent;
+  min-height: 100px;
+  min-width: 120px;
+  padding: 15px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+
+  &__text {
+    font-style: italic;
+  }
 }

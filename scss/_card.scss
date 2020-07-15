@@ -27,8 +27,14 @@
   }
 
   &__button {
+    font-size: 120%;
+    background-color: grey;
     padding: 5px;
-    margin-right: 0;
+    margin: 5px;
+    text-align: center;
+  }
+  &__button:hover {
+    background-color: crimson;
   }
 
   &__tags {
