@@ -5,6 +5,35 @@
   right: 0;
   bottom: 0;
   background-color: slategray;
-  display: flex;
-  justify-content: space-around;
+  padding: 0 40px;
+
+  &__navbar {
+    display: flex;
+    height: 60px;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__link {
+    width: 60px;
+    height: auto;
+    text-align: center;
+  }
+  &__icon--home {
+    min-width: 40px;
+    min-height: auto;
+  }
+  &__icon--bookmarks {
+    min-width: 40px;
+    min-height: auto;
+  }
+
+  &__icon--cards {
+    min-width: 40px;
+    min-height: auto;
+  }
+  &__icon--profile {
+    min-width: 40px;
+    min-height: auto;
+  }
 }

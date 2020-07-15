@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="styles.css" />
     <title>quizz-app</title>
 </head>
 
 
-<body>
-    <header>
+<body class="body">
+    <header class="header">
         <h1>Create</h1>
     </header>
     
@@ -47,12 +48,33 @@
     </main>
 
 
-    <footer>
-        <nav>
-            <a href="bookmarks.html">Bookmarks</a>
-            <a href="create.html">Create</a>
-            <a href="profile.html">Profile</a>
-        </nav>
+     <footer class="footer">
+      <nav class="footer__navbar">
+        <a class="footer__link" href="index.html"
+          ><img
+            class="footer__icon--home"
+            src="images/house-24px.svg"
+            alt="homebutton"
+        /></a>
+        <a class="footer__link" href="bookmarks.html"
+          ><img
+            class="footer__icon--bookmarks"
+            src="images/turned_in-24px.svg"
+            alt="bookmarks"
+        /></a>
+        <a class="current footer__link" href="create.html"
+          ><img
+            class="footer__icon--cards"
+            src="images/subject-24px.svg"
+            alt="cards"
+        /></a>
+        <a class="footer__link" href="profile.html"
+          ><img
+            class="footer__icon--profile"
+            src="images/account_circle-24px.svg"
+            alt="profile"
+        /></a>
+      </nav>
     </footer>
 
 </body>
