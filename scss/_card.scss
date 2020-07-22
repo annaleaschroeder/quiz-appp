@@ -2,11 +2,14 @@
   position: relative;
   border: 1px solid black;
   min-height: 100px;
-  min-width: 120px;
+  min-width: 200px;
   border-radius: 5px;
-  box-shadow: 8px;
+  box-shadow: 8px 8px 8px slategray;
   padding: 15px;
+  margin-top: 30px;
   margin-bottom: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
 
   &__question {
     font-family: 'Quattrocento Sans', sans-serif;
@@ -14,42 +17,42 @@
 
   &__bookmark {
     position: absolute;
-    top: -30px;
+    min-width: 60px;
+    min-height: auto;
+    top: -40px;
     right: 20px;
     height: 100px;
     width: 20px;
-    background-color: pink;
     cursor: pointer;
+    z-index: 50;
+    background-color: transparent;
+  }
+
+  &__bookmark--aktive {
+    color: black;
+    fill: black;
   }
 
   &__text {
     font-family: 'Roboto', sans-serif;
   }
 
-  &__button {
-    font-size: 120%;
-    background-color: grey;
-    padding: 5px;
-    margin: 5px;
-    text-align: center;
-  }
-  &__button:hover {
-    background-color: crimson;
-  }
-
   &__tags {
     display: flex;
+    flex-direction: start;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: sprace evenly;
     gap: 20px;
     padding: 0;
   }
 
   &__tag {
     list-style: none;
-    font-size: 0, 8em;
+    display: flex;
+    font-size: 0 8em;
     padding: 4px;
     border: 1px solid black;
     background-color: #ffb5b0;
+    border-radius: 5px;
   }
 }
