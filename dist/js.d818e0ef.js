@@ -130,7 +130,7 @@ var createNav = get('.footer__icon--cards');
 var profileNav = get('.footer__icon--profile'); //Funktion: Bei einem Click auf eins der Icons in der Nav-Bar soll der User zum entsprechenden Screen weiter geleitet werden
 
 homeNav.addEventListener('click', function () {
-  pageHome.classlist.remove('display-none');
+  pageHome.classList.remove('display-none');
   pageBookmarks.classList.add('display-none');
   pageCreate.classList.add('display-none');
   pageProfile.classList.add('display-none');
@@ -152,10 +152,58 @@ profileNav.addEventListener('click', function () {
   pageBookmarks.classList.add('display-none');
   pageCreate.classList.add('display-none');
   pageProfile.classList.remove('display-none');
-}); //function delcaration: get, um querySelector in der constant declaration raus kürzen zu
+});
+var cardList = getAll('.card');
+cardList.forEach(addToggleLogic);
+
+function addToggleLogic(card) {
+  var buttonAnswer = card.querySelector('.card__button--answer');
+  var buttonHide = card.querySelector('.card__button--hide-answer');
+  var answer = card.querySelector('.answer-text');
+  buttonAnswer.addEventListener('click', function () {
+    answer.classList.remove('display-none');
+    buttonAnswer.classList.add('display-none');
+    buttonHide.classList.remove('display-none');
+  });
+  buttonHide.addEventListener('click', function () {
+    buttonHide.classList.add('display-none');
+    answer.classList.add('display-none');
+    buttonAnswer.classList.remove('display-none');
+  });
+} //Constants for bookmarks on cards
+
+
+var bookmarkList = getAll('.card__bookmark');
+bookmarkList.forEach(addBookmarkLogic);
+
+function addBookmarkLogic(bookmark) {
+  bookmark.addEventListener('click', function (event) {
+    event.stopPropagation();
+    bookmark.classList.toggle('card__bookmark--active'); // !true === false
+    // !!true === true
+    // !false === true
+    // !!false
+    // if (1234) {
+    //   45345
+    // } else {
+    //   858585
+    // }
+    // 1234 ? 45345 : 858585
+    // if (bookmark.classList.contains('card__bookmark--active')) {
+    //   bookmark.classList.remove('card__bookmark--active')
+    // } else {
+    //   bookmark.classList.add('card__bookmark--active')
+    // }
+  });
+} //function delcaration: get, um querySelector in der constant declaration raus kürzen zu
+
 
 function get(selector) {
   return document.querySelector(selector);
+}
+
+function getAll(selector) {
+  return document.querySelectorAll(selector);
 }
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -185,7 +233,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50003" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51112" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

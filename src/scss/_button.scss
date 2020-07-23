@@ -13,3 +13,18 @@ button {
   font-size: 120%;
   border-radius: 5%;
 }
+
+.card__bookmark--active path {
+  color: black;
+  fill: black !important;
+}
+
+.card__bookmark--inactive {
+  color: grey;
+  fill: grey;
+}
+
+.card__bookmark path {
+  color: grey;
+  fill: grey;
+}
