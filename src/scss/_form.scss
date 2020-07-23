@@ -1,0 +1,18 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+.input-question {
+  width: 100%;
+  height: auto;
+}
+
+.d-flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.lable {
+  margin-top: 20px;
+}
