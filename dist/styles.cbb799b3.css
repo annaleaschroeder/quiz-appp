@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   grid-template-rows: 80px auto 60px;
   font-family: sans-serif;
@@ -8,7 +9,8 @@ body {
   margin: 0;
   background-color: white;
 }
-.header {
+
+header {
   position: fixed;
   text-align: center;
   background-color: slategray;
@@ -17,22 +19,27 @@ body {
   right: 0;
   z-index: 100;
 }
-.page .main {
+
+main {
   margin: 80px 40px 40px 40px;
   overflow: scroll;
   background-color: whitesmoke;
   height: 100vh;
-  width: 100vw;
+  width: auto;
 }
+
 .m-10 {
   margin: 10px;
 }
+
 .radius-5 {
   border-radius: 5px;
 }
+
 .display-none {
   display: none;
 }
+
 .card {
   position: relative;
   border: 1px solid black;
@@ -47,7 +54,7 @@ body {
   margin-right: 10px;
 }
 .card__question {
-  font-family: 'Quattrocento Sans', sans-serif;
+  font-family: "Quattrocento Sans", sans-serif;
 }
 .card__bookmark {
   position: absolute;
@@ -66,7 +73,7 @@ body {
   fill: black;
 }
 .card__text {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 .card__tags {
   display: flex;
@@ -85,17 +92,23 @@ body {
   background-color: #ffb5b0;
   border-radius: 5px;
 }
+
 .footer__navbar .current {
   background-color: rgba(171, 171, 171, 0.33);
 }
+
 button {
   display: block;
-  justify-content: center;
-  background-color: plum;
+  text-align: center;
+  background-color: grey;
   padding: 5px;
   margin: 5px;
   text-align: center;
+  font-weight: bold;
+  font-size: 120%;
+  border-radius: 5%;
 }
+
 .footer {
   position: fixed;
   height: 60px;
@@ -133,6 +146,7 @@ button {
   min-width: 40px;
   min-height: auto;
 }
+
 .profile {
   display: flex;
   justify-content: space-around;
@@ -146,6 +160,7 @@ button {
 .profile__name {
   font-size: 80%;
 }
+
 .bio {
   border: 1px solid transparent;
   min-height: 100px;
@@ -157,3 +172,35 @@ button {
 .bio__text {
   font-style: italic;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-question {
+  width: 100%;
+  padding: 20px;
+  text-indent: 20px;
+  margin: 10px;
+}
+
+.input-answer {
+  width: 100%;
+  padding: 20px;
+  margin: 10px;
+  text-indent: 20px;
+}
+
+.input-lables {
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  text-indent: 20px;
+}
+
+.lable {
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=/styles.cbb799b3.css.map */

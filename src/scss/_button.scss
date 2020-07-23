@@ -4,9 +4,12 @@
 
 button {
   display: block;
-  justify-content: center;
-  background-color: plum;
+  text-align: center;
+  background-color: grey;
   padding: 5px;
   margin: 5px;
   text-align: center;
+  font-weight: bold;
+  font-size: 120%;
+  border-radius: 5%;
 }

@@ -1,18 +1,29 @@
 form {
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
 }
 
 .input-question {
   width: 100%;
-  height: auto;
+  padding: 20px;
+  text-indent: 20px;
+  margin: 10px;
 }
 
-.d-flex-wrap {
-  display: flex;
-  flex-wrap: wrap;
+.input-answer {
+  width: 100%;
+  padding: 20px;
+  margin: 10px;
+  text-indent: 20px;
 }
+
+.input-lables {
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  text-indent: 20px;
+}
+
 .lable {
   margin-top: 20px;
 }
