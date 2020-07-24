@@ -67,29 +67,51 @@ function addBookmarkLogic(bookmark) {
   bookmark.addEventListener('click', (event) => {
     event.stopPropagation()
     bookmark.classList.toggle('card__bookmark--active')
-
-    // !true === false
-    // !!true === true
-    // !false === true
-    // !!false
-
-    // if (1234) {
-    //   45345
-    // } else {
-    //   858585
-    // }
-
-    // 1234 ? 45345 : 858585
-
-    // if (bookmark.classList.contains('card__bookmark--active')) {
-    //   bookmark.classList.remove('card__bookmark--active')
-    // } else {
-    //   bookmark.classList.add('card__bookmark--active')
-    // }
   })
 }
 
-//function delcaration: get, um querySelector in der constant declaration raus kürzen zu
+//Clear Input Field after clicking on submit button
+
+const form = get('form')
+
+form.addEventListener('submit', function (event) {
+  event.preventDefault()
+  form.reset()
+})
+
+//reset Form after Clicking on Submit-Button:
+//function addInputLogic()
+//if (buttonSubmit.addEventListener('click')) {
+//inputList.querySelector('input', reset)
+
+//}
+
+//reset form
+//function reset() {
+//    inputList.value= ''
+//}
+// !true === false
+// !!true === true
+// !false === true
+// !!false
+
+// if (1234) {
+//   45345
+// } else {
+//   858585
+// }
+
+// 1234 ? 45345 : 858585
+
+// if (bookmark.classList.contains('card__bookmark--active')) {
+//   bookmark.classList.remove('card__bookmark--active')
+// } else {
+//   bookmark.classList.add('card__bookmark--active')
+// }
+// })
+//}
+
+//function delcaration: get, um querySelector in der constant declaration raus kürzen zu. können zu util.js verschoben werden
 function get(selector) {
   return document.querySelector(selector)
 }
