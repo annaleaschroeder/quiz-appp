@@ -6,382 +6,432 @@
     <link rel="stylesheet" href="/styles.cbb799b3.css">
     <script defer="" src="/js.d818e0ef.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
-    <title>quizz-app</title>
+    <title>quiz-app</title>
   <script src="/styles.cbb799b3.js"></script></head>
 
-
   <body>
-  <section class="body page page-questions">
     <header class="header">
       <h1>Quiz-App</h1>
     </header>
+    <section data-js="page" data-name="dashboard" class="body page page-questions">
+      <main class="main">
+        <section class="card radius-5">
+          <svg class="card__bookmark card__bookmark--active" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+            <path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"></path>
+          </svg>
 
-    <main class="main">
-      <section class="card radius-5">
-        <svg class="card__bookmark card__bookmark--active" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-          <path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"></path>
-        </svg>
+          <h2 class="card__question">Question</h2>
+          <p class="card__text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Asperiores, nesciunt adipisci? Quia voluptate voluptas harum eius
+            vel, error qui natus ipsam. Natus nulla harum in quas sit dicta
+            sequi facilis!
+          </p>
 
-        <h2 class="card__question">Question</h2>
-        <p class="card__text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores,
-          nesciunt adipisci? Quia voluptate voluptas harum eius vel, error qui
-          natus ipsam. Natus nulla harum in quas sit dicta sequi facilis!
-        </p>
+          <button class="card_button card__button--answer radius-5">
+            Show Answer
+          </button>
+          <button class="card_button card__button--hide-answer display-none radius-5">
+            Hide Answer
+          </button>
+          <p class="answer-text display-none">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere,
+            exercitationem consectetur! Provident laudantium praesentium a
+            obcaecati ipsam deleniti esse, consequatur, consectetur amet,
+            molestiae magni laborum harum enim. Est, neque aliquam?
+          </p>
+          <ul class="card__tags">
+            <li class="card__tag">Item1</li>
+            <li class="card__tag">Item2</li>
+            <li class="card__tag">Item3 longer text</li>
+            <li class="card__tag">Item4</li>
+            <li class="card__tag">Item5</li>
+            <li class="card__tag">Item6</li>
+          </ul>
+        </section>
 
-        <button class="card_button card__button--answer radius-5">
-          Show Answer
-        </button>
-        <button class="card_button card__button--hide-answer display-none radius-5">
-          Hide Answer
-        </button>
-        <p class="answer-text display-none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, exercitationem consectetur! Provident laudantium praesentium a obcaecati ipsam deleniti esse, consequatur, consectetur amet, molestiae magni laborum harum enim. Est, neque aliquam?</p>
-        <ul class="card__tags">
-          <li class="card__tag">Item1</li>
-          <li class="card__tag">Item2</li>
-          <li class="card__tag">Item3 longer text</li>
-          <li class="card__tag">Item4</li>
-          <li class="card__tag">Item5</li>
-          <li class="card__tag">Item6</li>
-        </ul>
-      </section>
+        <section class="card radius-5">
+          <svg class="card__bookmark" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+            <path class="card__bookmark--active" d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"></path>
+          </svg>
+          <h2 class="card__question">Question</h2>
+          <p class="card__text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Asperiores, nesciunt adipisci? Quia voluptate voluptas harum eius
+            vel, error qui natus ipsam. Natus nulla harum in quas sit dicta
+            sequi facilis!
+          </p>
+          <button class="card_button card__button--answer radius-5">
+            Show Answer
+          </button>
+          <button class="card_button card__button--hide-answer display-none radius-5">
+            Hide Answer
+          </button>
+          <p class="answer-text display-none">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere,
+            exercitationem consectetur! Provident laudantium praesentium a
+            obcaecati ipsam deleniti esse, consequatur, consectetur amet,
+            molestiae magni laborum harum enim. Est, neque aliquam?
+          </p>
+          <ul class="card__tags">
+            <li class="card__tag">Item1</li>
+            <li class="card__tag">Item2</li>
+            <li class="card__tag">Item3</li>
+            <li class="card__tag">Item4</li>
+            <li class="card__tag">Item5</li>
+            <li class="card__tag">Item6</li>
+          </ul>
+        </section>
 
-      <section class="card radius-5">
-         <svg class="card__bookmark" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-          <path class="card__bookmark--active" d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"></path>
-        </svg>
-        <h2 class="card__question">Question</h2>
-        <p class="card__text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores,
-          nesciunt adipisci? Quia voluptate voluptas harum eius vel, error qui
-          natus ipsam. Natus nulla harum in quas sit dicta sequi facilis!
-        </p>
-        <button class="card_button card__button--answer radius-5">
-          Show Answer
-        </button>
-        <button class="card_button card__button--hide-answer display-none radius-5">
-          Hide Answer
-        </button>
-        <p class="answer-text display-none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, exercitationem consectetur! Provident laudantium praesentium a obcaecati ipsam deleniti esse, consequatur, consectetur amet, molestiae magni laborum harum enim. Est, neque aliquam?</p>
-        <ul class="card__tags">
-          <li class="card__tag">Item1</li>
-          <li class="card__tag">Item2</li>
-          <li class="card__tag">Item3</li>
-          <li class="card__tag">Item4</li>
-          <li class="card__tag">Item5</li>
-          <li class="card__tag">Item6</li>
-        </ul>
-      </section>
+        <section class="card radius-5">
+          <svg class="card__bookmark" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+            <path class="card__bookmark--active" d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"></path>
+          </svg>
+          <h2 class="card__question">Question</h2>
+          <p class="card__text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Asperiores, nesciunt adipisci? Quia voluptate voluptas harum eius
+            vel, error qui natus ipsam. Natus nulla harum in quas sit dicta
+            sequi facilis!
+          </p>
+          <button class="card_button card__button--answer radius-5">
+            Show Answer
+          </button>
+          <button class="card_button card__button--hide-answer display-none radius-5">
+            Hide Answer
+          </button>
+          <p class="answer-text display-none">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere,
+            exercitationem consectetur! Provident laudantium praesentium a
+            obcaecati ipsam deleniti esse, consequatur, consectetur amet,
+            molestiae magni laborum harum enim. Est, neque aliquam?
+          </p>
+          <ul class="card__tags">
+            <li class="card__tag">Item1</li>
+            <li class="card__tag">Item2</li>
+            <li class="card__tag">Item3</li>
+            <li class="card__tag">Item4</li>
+            <li class="card__tag">Item5</li>
+            <li class="card__tag">Item6</li>
+          </ul>
+        </section>
 
-      <section class="card radius-5">
-         <svg class="card__bookmark" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-          <path class="card__bookmark--active" d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"></path>
-        </svg>
-        <h2 class="card__question">Question</h2>
-        <p class="card__text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores,
-          nesciunt adipisci? Quia voluptate voluptas harum eius vel, error qui
-          natus ipsam. Natus nulla harum in quas sit dicta sequi facilis!
-        </p>
-        <button class="card_button card__button--answer radius-5">
-          Show Answer
-        </button>
-        <button class="card_button card__button--hide-answer display-none radius-5">
-          Hide Answer
-        </button>
-        <p class="answer-text display-none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, exercitationem consectetur! Provident laudantium praesentium a obcaecati ipsam deleniti esse, consequatur, consectetur amet, molestiae magni laborum harum enim. Est, neque aliquam?</p>
-        <ul class="card__tags">
-          <li class="card__tag">Item1</li>
-          <li class="card__tag">Item2</li>
-          <li class="card__tag">Item3</li>
-          <li class="card__tag">Item4</li>
-          <li class="card__tag">Item5</li>
-          <li class="card__tag">Item6</li>
-        </ul>
-      </section>
+        <section class="card radius-5">
+          <svg class="card__bookmark" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+            <path class="card__bookmark--active" d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"></path>
+          </svg>
+          <h2 class="card__question">Question</h2>
+          <p class="card__text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Asperiores, nesciunt adipisci? Quia voluptate voluptas harum eius
+            vel, error qui natus ipsam. Natus nulla harum in quas sit dicta
+            sequi facilis!
+          </p>
+          <button class="card_button card__button--answer radius-5">
+            Show Answer
+          </button>
+          <button class="card_button card__button--hide-answer display-none radius-5">
+            Hide Answer
+          </button>
+          <p class="answer-text display-none">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere,
+            exercitationem consectetur! Provident laudantium praesentium a
+            obcaecati ipsam deleniti esse, consequatur, consectetur amet,
+            molestiae magni laborum harum enim. Est, neque aliquam?
+          </p>
+          <ul class="card__tags">
+            <li class="card__tag">Item1</li>
+            <li class="card__tag">Item2</li>
+            <li class="card__tag">Item3</li>
+            <li class="card__tag">Item4</li>
+            <li class="card__tag">Item5</li>
+            <li class="card__tag">Item6</li>
+          </ul>
+        </section>
 
-      <section class="card radius-5">
-         <svg class="card__bookmark" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-          <path class="card__bookmark--active" d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"></path>
-        </svg>
-        <h2 class="card__question">Question</h2>
-        <p class="card__text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores,
-          nesciunt adipisci? Quia voluptate voluptas harum eius vel, error qui
-          natus ipsam. Natus nulla harum in quas sit dicta sequi facilis!
-        </p>
-        <button class="card_button card__button--answer radius-5">
-          Show Answer
-        </button>
-        <button class="card_button card__button--hide-answer display-none radius-5">
-          Hide Answer
-        </button>
-        <p class="answer-text display-none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, exercitationem consectetur! Provident laudantium praesentium a obcaecati ipsam deleniti esse, consequatur, consectetur amet, molestiae magni laborum harum enim. Est, neque aliquam?</p>
-        <ul class="card__tags">
-          <li class="card__tag">Item1</li>
-          <li class="card__tag">Item2</li>
-          <li class="card__tag">Item3</li>
-          <li class="card__tag">Item4</li>
-          <li class="card__tag">Item5</li>
-          <li class="card__tag">Item6</li>
-        </ul>
-      </section>
+        <section class="card radius-5">
+          <svg class="card__bookmark" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+            <path class="card__bookmark--active" d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"></path>
+          </svg>
+          <h2 class="card__question">Question</h2>
+          <p class="card__text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Asperiores, nesciunt adipisci? Quia voluptate voluptas harum eius
+            vel, error qui natus ipsam. Natus nulla harum in quas sit dicta
+            sequi facilis!
+          </p>
+          <button class="card_button card__button--answer radius-5">
+            Show Answer
+          </button>
+          <button class="card_button card__button--hide-answer display-none radius-5">
+            Hide Answer
+          </button>
+          <p class="answer-text display-none">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere,
+            exercitationem consectetur! Provident laudantium praesentium a
+            obcaecati ipsam deleniti esse, consequatur, consectetur amet,
+            molestiae magni laborum harum enim. Est, neque aliquam?
+          </p>
+          <ul class="card__tags">
+            <li class="card__tag">Item1</li>
+            <li class="card__tag">Item2</li>
+            <li class="card__tag">Item3</li>
+            <li class="card__tag">Item4</li>
+            <li class="card__tag">Item5</li>
+            <li class="card__tag">Item6</li>
+          </ul>
+        </section>
+      </main>
+    </section>
 
-      <section class="card radius-5">
-         <svg class="card__bookmark" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-          <path class="card__bookmark--active" d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"></path>
-        </svg>
-        <h2 class="card__question">Question</h2>
-        <p class="card__text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores,
-          nesciunt adipisci? Quia voluptate voluptas harum eius vel, error qui
-          natus ipsam. Natus nulla harum in quas sit dicta sequi facilis!
-        </p>
-        <button class="card_button card__button--answer radius-5">
-          Show Answer
-        </button>
-        <button class="card_button card__button--hide-answer display-none radius-5">
-          Hide Answer
-        </button>
-        <p class="answer-text display-none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, exercitationem consectetur! Provident laudantium praesentium a obcaecati ipsam deleniti esse, consequatur, consectetur amet, molestiae magni laborum harum enim. Est, neque aliquam?</p>
-        <ul class="card__tags">
-          <li class="card__tag">Item1</li>
-          <li class="card__tag">Item2</li>
-          <li class="card__tag">Item3</li>
-          <li class="card__tag">Item4</li>
-          <li class="card__tag">Item5</li>
-          <li class="card__tag">Item6</li>
-        </ul>
-      </section>
-    </main>
-  </section>
-  
-  <section class="body page page-bookmarks display-none">
-    <header class="header">
-      <h1>Bookmarks</h1>
-    </header>
+    <section data-js="page" data-name="bookmarks" class="body page page-bookmarks display-none">
+      <header class="header">
+        <h1>Bookmarks</h1>
+      </header>
 
-    <main class="main">
-      <section class="card radius-5">
-         <svg class="card__bookmark" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-          <path class="card__bookmark--active" d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"></path>
-        </svg>
-        <h2 class="card__question">Question</h2>
-        <p class="card__text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores,
-          nesciunt adipisci? Quia voluptate voluptas harum eius vel, error qui
-          natus ipsam. Natus nulla harum in quas sit dicta sequi facilis!
-        </p>
-        <button class="card_button card__button--answer radius-5">
-          Show Answer
-        </button>
-        <button class="card_button card__button--hide-answer display-none radius-5">
-          Hide Answer
-        </button>
-        <p class="answer-text display-none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, exercitationem consectetur! Provident laudantium praesentium a obcaecati ipsam deleniti esse, consequatur, consectetur amet, molestiae magni laborum harum enim. Est, neque aliquam?</p>
-        <ul class="card__tags">
-          <li class="card__tag">Item1</li>
-          <li class="card__tag">Item2</li>
-          <li class="card__tag">Item3</li>
-          <li class="card__tag">Item4</li>
-          <li class="card__tag">Item5</li>
-          <li class="card__tag">Item6</li>
-        </ul>
-      </section>
+      <main class="main">
+        <section class="card radius-5">
+          <svg class="card__bookmark" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+            <path class="card__bookmark--active" d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"></path>
+          </svg>
+          <h2 class="card__question">Question</h2>
+          <p class="card__text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Asperiores, nesciunt adipisci? Quia voluptate voluptas harum eius
+            vel, error qui natus ipsam. Natus nulla harum in quas sit dicta
+            sequi facilis!
+          </p>
+          <button class="card_button card__button--answer radius-5">
+            Show Answer
+          </button>
+          <button class="card_button card__button--hide-answer display-none radius-5">
+            Hide Answer
+          </button>
+          <p class="answer-text display-none">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere,
+            exercitationem consectetur! Provident laudantium praesentium a
+            obcaecati ipsam deleniti esse, consequatur, consectetur amet,
+            molestiae magni laborum harum enim. Est, neque aliquam?
+          </p>
+          <ul class="card__tags">
+            <li class="card__tag">Item1</li>
+            <li class="card__tag">Item2</li>
+            <li class="card__tag">Item3</li>
+            <li class="card__tag">Item4</li>
+            <li class="card__tag">Item5</li>
+            <li class="card__tag">Item6</li>
+          </ul>
+        </section>
 
-      <section class="card radius-5">
-         <svg class="card__bookmark" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-          <path class="card__bookmark--active" d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"></path>
-        </svg>
-        <h2 class="card__question">Question</h2>
-        <p class="card__text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores,
-          nesciunt adipisci? Quia voluptate voluptas harum eius vel, error qui
-          natus ipsam. Natus nulla harum in quas sit dicta sequi facilis!
-        </p>
-        <button class="card_button card__button--answer radius-5">
-          Show Answer
-        </button>
-        <button class="card_button card__button--hide-answer display-none radius-5">
-          Hide Answer
-        </button>
-        <p class="answer-text display-none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, exercitationem consectetur! Provident laudantium praesentium a obcaecati ipsam deleniti esse, consequatur, consectetur amet, molestiae magni laborum harum enim. Est, neque aliquam?</p>
-        <ul class="card__tags">
-          <li class="card__tag">Item1</li>
-          <li class="card__tag">Item2</li>
-          <li class="card__tag">Item3</li>
-          <li class="card__tag">Item4</li>
-          <li class="card__tag">Item5</li>
-          <li class="card__tag">Item6</li>
-        </ul>
-      </section>
+        <section class="card radius-5">
+          <svg class="card__bookmark" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+            <path class="card__bookmark--active" d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"></path>
+          </svg>
+          <h2 class="card__question">Question</h2>
+          <p class="card__text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Asperiores, nesciunt adipisci? Quia voluptate voluptas harum eius
+            vel, error qui natus ipsam. Natus nulla harum in quas sit dicta
+            sequi facilis!
+          </p>
+          <button class="card_button card__button--answer radius-5">
+            Show Answer
+          </button>
+          <button class="card_button card__button--hide-answer display-none radius-5">
+            Hide Answer
+          </button>
+          <p class="answer-text display-none">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere,
+            exercitationem consectetur! Provident laudantium praesentium a
+            obcaecati ipsam deleniti esse, consequatur, consectetur amet,
+            molestiae magni laborum harum enim. Est, neque aliquam?
+          </p>
+          <ul class="card__tags">
+            <li class="card__tag">Item1</li>
+            <li class="card__tag">Item2</li>
+            <li class="card__tag">Item3</li>
+            <li class="card__tag">Item4</li>
+            <li class="card__tag">Item5</li>
+            <li class="card__tag">Item6</li>
+          </ul>
+        </section>
 
-      <section class="card radius-5">
-         <svg class="card__bookmark" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-          <path class="card__bookmark--active" d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"></path>
-        </svg>
-        <h2 class="card__question">Question</h2>
-        <p class="card__text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores,
-          nesciunt adipisci? Quia voluptate voluptas harum eius vel, error qui
-          natus ipsam. Natus nulla harum in quas sit dicta sequi facilis!
-        </p>
-        <button class="card_button card__button--answer radius-5">
-          Show Answer
-        </button>
-        <button class="card_button card__button--hide-answer display-none radius-5">
-          Hide Answer
-        </button>
-        <p class="answer-text display-none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, exercitationem consectetur! Provident laudantium praesentium a obcaecati ipsam deleniti esse, consequatur, consectetur amet, molestiae magni laborum harum enim. Est, neque aliquam?</p>
-        <ul class="card__tags">
-          <li class="card__tag">Item1</li>
-          <li class="card__tag">Item2</li>
-          <li class="card__tag">Item3</li>
-          <li class="card__tag">Item4</li>
-          <li class="card__tag">Item5</li>
-          <li class="card__tag">Item6</li>
-        </ul>
-      </section>
+        <section class="card radius-5">
+          <svg class="card__bookmark" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+            <path class="card__bookmark--active" d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"></path>
+          </svg>
+          <h2 class="card__question">Question</h2>
+          <p class="card__text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Asperiores, nesciunt adipisci? Quia voluptate voluptas harum eius
+            vel, error qui natus ipsam. Natus nulla harum in quas sit dicta
+            sequi facilis!
+          </p>
+          <button class="card_button card__button--answer radius-5">
+            Show Answer
+          </button>
+          <button class="card_button card__button--hide-answer display-none radius-5">
+            Hide Answer
+          </button>
+          <p class="answer-text display-none">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere,
+            exercitationem consectetur! Provident laudantium praesentium a
+            obcaecati ipsam deleniti esse, consequatur, consectetur amet,
+            molestiae magni laborum harum enim. Est, neque aliquam?
+          </p>
+          <ul class="card__tags">
+            <li class="card__tag">Item1</li>
+            <li class="card__tag">Item2</li>
+            <li class="card__tag">Item3</li>
+            <li class="card__tag">Item4</li>
+            <li class="card__tag">Item5</li>
+            <li class="card__tag">Item6</li>
+          </ul>
+        </section>
 
-      <section class="card radius-5">
-         <svg class="card__bookmark" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-          <path class="card__bookmark--active" d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"></path>
-        </svg>
-        <h2 class="card__question">Question</h2>
-        <p class="card__text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores,
-          nesciunt adipisci? Quia voluptate voluptas harum eius vel, error qui
-          natus ipsam. Natus nulla harum in quas sit dicta sequi facilis!
-        </p>
-        <button class="card_button card__button--answer radius-5">
-          Show Answer
-        </button>
-        <button class="card_button card__button--hide-answer display-none radius-5">
-          Hide Answer
-        </button>
-        <p class="answer-text display-none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, exercitationem consectetur! Provident laudantium praesentium a obcaecati ipsam deleniti esse, consequatur, consectetur amet, molestiae magni laborum harum enim. Est, neque aliquam?</p>
-        <ul class="card__tags">
-          <li class="card__tag">Item1</li>
-          <li class="card__tag">Item2</li>
-          <li class="card__tag">Item3</li>
-          <li class="card__tag">Item4</li>
-          <li class="card__tag">Item5</li>
-          <li class="card__tag">Item6</li>
-        </ul>
-      </section>
+        <section class="card radius-5">
+          <svg class="card__bookmark" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+            <path class="card__bookmark--active" d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"></path>
+          </svg>
+          <h2 class="card__question">Question</h2>
+          <p class="card__text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Asperiores, nesciunt adipisci? Quia voluptate voluptas harum eius
+            vel, error qui natus ipsam. Natus nulla harum in quas sit dicta
+            sequi facilis!
+          </p>
+          <button class="card_button card__button--answer radius-5">
+            Show Answer
+          </button>
+          <button class="card_button card__button--hide-answer display-none radius-5">
+            Hide Answer
+          </button>
+          <p class="answer-text display-none">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere,
+            exercitationem consectetur! Provident laudantium praesentium a
+            obcaecati ipsam deleniti esse, consequatur, consectetur amet,
+            molestiae magni laborum harum enim. Est, neque aliquam?
+          </p>
+          <ul class="card__tags">
+            <li class="card__tag">Item1</li>
+            <li class="card__tag">Item2</li>
+            <li class="card__tag">Item3</li>
+            <li class="card__tag">Item4</li>
+            <li class="card__tag">Item5</li>
+            <li class="card__tag">Item6</li>
+          </ul>
+        </section>
 
-      <section class="card radius-5">
-         <svg class="card__bookmark" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-          <path class="card__bookmark--active" d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"></path>
-        </svg>
-        <h2 class="card__question">Question</h2>
-        <p class="card__text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores,
-          nesciunt adipisci? Quia voluptate voluptas harum eius vel, error qui
-          natus ipsam. Natus nulla harum in quas sit dicta sequi facilis!
-        </p>
-        <button class="card_button card__button--answer radius-5">
-          Show Answer
-        </button>
-        <button class="card_button card__button--hide-answer display-none radius-5">
-          Hide Answer
-        </button>
-        <p class="answer-text display-none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, exercitationem consectetur! Provident laudantium praesentium a obcaecati ipsam deleniti esse, consequatur, consectetur amet, molestiae magni laborum harum enim. Est, neque aliquam?</p>
-        <ul class="card__tags">
-          <li class="card__tag">Item1</li>
-          <li class="card__tag">Item2</li>
-          <li class="card__tag">Item3</li>
-          <li class="card__tag">Item4</li>
-          <li class="card__tag">Item5</li>
-          <li class="card__tag">Item6</li>
-        </ul>
-      </section>
-    </main>
-  </section>
+        <section class="card radius-5">
+          <svg class="card__bookmark" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+            <path class="card__bookmark--active" d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"></path>
+          </svg>
+          <h2 class="card__question">Question</h2>
+          <p class="card__text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Asperiores, nesciunt adipisci? Quia voluptate voluptas harum eius
+            vel, error qui natus ipsam. Natus nulla harum in quas sit dicta
+            sequi facilis!
+          </p>
+          <button class="card_button card__button--answer radius-5">
+            Show Answer
+          </button>
+          <button class="card_button card__button--hide-answer display-none radius-5">
+            Hide Answer
+          </button>
+          <p class="answer-text display-none">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere,
+            exercitationem consectetur! Provident laudantium praesentium a
+            obcaecati ipsam deleniti esse, consequatur, consectetur amet,
+            molestiae magni laborum harum enim. Est, neque aliquam?
+          </p>
+          <ul class="card__tags">
+            <li class="card__tag">Item1</li>
+            <li class="card__tag">Item2</li>
+            <li class="card__tag">Item3</li>
+            <li class="card__tag">Item4</li>
+            <li class="card__tag">Item5</li>
+            <li class="card__tag">Item6</li>
+          </ul>
+        </section>
+      </main>
+    </section>
 
-  <section class="body page page-create display-none">
-    <header class="header">
-      <h1>Create</h1>
-    </header>
+    <section data-js="page" data-name="create" class="body page page-create display-none">
+      <main>
+        <form action="submit">
+          <div>
+            <div class="label">
+              <label for="question" class="form__label">Question</label>
+            </div>
 
-    <main>
-      <form action="submit">
-        <div>
-
-          <div class="label">
-            <label for="question" class="form__label">Question</label>
+            <textarea class="input-question" name="question" id="question" cols="30" rows="10" placeholder="What do you want to ask?"></textarea>
+          </div>
+          <div>
+            <div class="label">
+              <label for="answer" class="form__label">Answer</label>
+            </div>
+            <textarea class="input-answer" name="answer" id="answer" cols="30" rows="10" placeholder="What's the answer?"></textarea>
           </div>
 
-          <textarea class="input-question" name="question" id="question" cols="30" rows="10" placeholder="What do you want to ask?"></textarea>
-
-        </div>
-        <div>
-          <div class="label">
-            <label for="answer" class="form__label">Answer</label>
+          <div class="input-tags">
+            <div class="lable">
+              <label for="tags" class="form__label">Tags</label>
+            </div>
+            <textarea name="tags" id="tags" cols="1" rows="1" placeholder="tag1,tag2,tag3" class="input-lables p-10"></textarea>
           </div>
-          <textarea class="input-answer" name="answer" id="answer" cols="30" rows="10" placeholder="What's the answer?"></textarea>
-        </div>
 
+          <button class="submit p-10 mb-40">Submit</button>
+        </form>
+      </main>
+    </section>
 
-        <div class="input-tags">
-          <div class="lable">
-            <label for="tags" class="form__label">Tags</label>
-          </div>
-          <textarea name="tags" id="tags" cols="1" rows="1" placeholder="tag1,tag2,tag3" class="input-lables p-10"></textarea>
-        </div>
-
-
-        <button class="submit p-10 mb-40">Submit</button>
-      </form>
-    </main>
-
-  </section>
-
-<section class="body page page-profile display-none">
-    <header class="header">
-      <h1>Profile</h1>
-    </header>
-    
-    <main>
-
+    <section data-js="page" data-name="profile" class="body page page-profile display-none">
+      <main>
         <section class="profile">
-            <img class="profile__image" src="/portrait-schroeder-annalea.00f23ac3.jpg" alt="Anna-Lea Schröder">
-            <p class="profile__name">Profile Name</p>
-
+          <img class="profile__image" src="/portrait-schroeder-annalea.00f23ac3.jpg" alt="Anna-Lea Schröder">
+          <p class="profile__name">Profile Name</p>
         </section>
 
         <section class="bio">
-
-          <p class="bio__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta mollitia consectetur cumque ipsum doloribus saepe veritatis, sed nobis possimus. Eligendi recusandae culpa unde, sit dignissimos minus illum vel ut natus.</p>
-
-        <section>
-
-        <section class="skills">
-            <h2>Skills</h2>
-            <ul class="card__tags">
-                <li class="card__tag">Skill1</li>
-                <li class="card__tag">Skill2</li>
-                <li class="card__tag">Skill3</li>
-                
-            </ul>
+          <p class="bio__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+            mollitia consectetur cumque ipsum doloribus saepe veritatis, sed
+            nobis possimus. Eligendi recusandae culpa unde, sit dignissimos
+            minus illum vel ut natus.
+          </p>
         </section>
 
-        <a><button>Logout</button></a>
-        
+        <section class="skills">
+          <h2>Skills</h2>
+          <ul class="card__tags">
+            <li class="card__tag">Skill1</li>
+            <li class="card__tag">Skill2</li>
+            <li class="card__tag">Skill3</li>
+          </ul>
+        </section>
 
-    </section></section></main>
-</section>
+        <button>Logout</button>
+      </main>
+    </section>
 
-
-<footer class="footer">
+    <footer class="footer">
       <nav class="footer__navbar">
-          <img class="footer__icon footer__icon--home" src="/house-24px.c94bfa62.svg" alt="homebutton">
-          <img class="footer__icon footer__icon--bookmarks" src="/turned_in-24px.579e9082.svg" alt="bookmarks">
-        <img class="footer__icon footer__icon--cards" src="/subject-24px.2f9718dd.svg" alt="cards">
-          <img class="footer__icon footer__icon--profile" src="/account_circle-24px.112d7e70.svg" alt="profile">
+        <svg data-js="nav-icon" data-name="dashboard" class="footer__icon footer__icon--home footer__icon--active" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="28px" height="28px">
+          <path fill="currentcolor" fill-rule="evenodd" d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
+        </svg>
+
+        <svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 0 24 24" width="28" class="footer__icon footer__icon--bookmarks" data-js="nav-icon" data-name="bookmarks">
+          <path fill="currentcolor" fill-rule="evenodd" d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"></path>
+        </svg>
+
+        <svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 0 28 28" width="28" data-js="nav-icon" data-name="create" class="footer__icon footer__icon--cards">
+          <path class="footer__icon footer__icon--cards" fill="currentcolor" fill-rule="evenodd" d="M14 17H4v2h10v-2zm6-8H4v2h16V9zM4 15h16v-2H4v2zM4 5v2h16V5H4z"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 0 24 24" width="28" data-js="nav-icon" data-name="profile" class="footer__icon footer__icon--profile">
+          <path fill="currentcolor" fill-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path>
+        </svg>
       </nav>
-</footer>
-    </body>
+    </footer>
+  </body>
 </html>
-
-

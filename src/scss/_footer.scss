@@ -38,3 +38,13 @@
     min-height: auto;
   }
 }
+
+.footer__icon path {
+  color: darkblue;
+  fill: darkblue;
+}
+
+.footer__icon--active path {
+  color: black;
+  fill: black;
+}

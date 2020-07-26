@@ -117,78 +117,70 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"src/js/index.js":[function(require,module,exports) {
-// constanten, die zum Inhalt (=body) der vier verschiedenen Screens führen
-var pageHome = get('.page-questions');
-var pageBookmarks = get('.page-bookmarks');
-var pageCreate = get('.page-create');
-var pageProfile = get('.page-profile'); //constanten, die die Eingabe-Buttons in der Navbar repräsentieren
+})({"src/js/utility.js":[function(require,module,exports) {
+"use strict";
 
-var homeNav = get('.footer__icon--home');
-var bookmarksNav = get('.footer__icon--bookmarks');
-var createNav = get('.footer__icon--cards');
-var profileNav = get('.footer__icon--profile'); //Funktion: Bei einem Click auf eins der Icons in der Nav-Bar soll der User zum entsprechenden Screen weiter geleitet werden
-
-homeNav.addEventListener('click', function () {
-  pageHome.classList.remove('display-none');
-  pageBookmarks.classList.add('display-none');
-  pageCreate.classList.add('display-none');
-  pageProfile.classList.add('display-none');
+Object.defineProperty(exports, "__esModule", {
+  value: true
 });
-bookmarksNav.addEventListener('click', function () {
-  pageHome.classList.add('display-none');
-  pageBookmarks.classList.remove('display-none');
-  pageCreate.classList.add('display-none');
-  pageProfile.classList.add('display-none');
+exports.get = get;
+exports.getAll = getAll;
+
+function get(selector) {
+  return document.querySelector(selector);
+}
+
+function getAll(selector) {
+  return document.querySelectorAll(selector);
+}
+},{}],"src/js/cards.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
 });
-createNav.addEventListener('click', function () {
-  pageHome.classList.add('display-none');
-  pageBookmarks.classList.add('display-none');
-  pageCreate.classList.remove('display-none');
-  pageProfile.classList.add('display-none');
+exports.cardLogic = cardLogic;
+
+var _utility = require("./utility");
+
+function cardLogic() {
+  var cardList = (0, _utility.getAll)('.card');
+  cardList.forEach(addToggleLogic);
+
+  function addToggleLogic(card) {
+    var buttonAnswer = card.querySelector('.card__button--answer');
+    var buttonHide = card.querySelector('.card__button--hide-answer');
+    var answer = card.querySelector('.answer-text');
+    buttonAnswer.addEventListener('click', function () {
+      answer.classList.remove('display-none');
+      buttonAnswer.classList.add('display-none');
+      buttonHide.classList.remove('display-none');
+    });
+    buttonHide.addEventListener('click', function () {
+      buttonHide.classList.add('display-none');
+      answer.classList.add('display-none');
+      buttonAnswer.classList.remove('display-none');
+    });
+  }
+}
+},{"./utility":"src/js/utility.js"}],"src/js/input.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
 });
-profileNav.addEventListener('click', function () {
-  pageHome.classList.add('display-none');
-  pageBookmarks.classList.add('display-none');
-  pageCreate.classList.add('display-none');
-  pageProfile.classList.remove('display-none');
-});
-var cardList = getAll('.card');
-cardList.forEach(addToggleLogic);
+exports.clearInput = clearInput;
 
-function addToggleLogic(card) {
-  var buttonAnswer = card.querySelector('.card__button--answer');
-  var buttonHide = card.querySelector('.card__button--hide-answer');
-  var answer = card.querySelector('.answer-text');
-  buttonAnswer.addEventListener('click', function () {
-    answer.classList.remove('display-none');
-    buttonAnswer.classList.add('display-none');
-    buttonHide.classList.remove('display-none');
-  });
-  buttonHide.addEventListener('click', function () {
-    buttonHide.classList.add('display-none');
-    answer.classList.add('display-none');
-    buttonAnswer.classList.remove('display-none');
-  });
-} //Constants for bookmarks on cards
+var _utility = require("./utility");
 
-
-var bookmarkList = getAll('.card__bookmark');
-bookmarkList.forEach(addBookmarkLogic);
-
-function addBookmarkLogic(bookmark) {
-  bookmark.addEventListener('click', function (event) {
-    event.stopPropagation();
-    bookmark.classList.toggle('card__bookmark--active');
+function clearInput() {
+  var form = (0, _utility.get)('form');
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    form.reset();
   });
 } //Clear Input Field after clicking on submit button
-
-
-var form = get('form');
-form.addEventListener('submit', function (event) {
-  event.preventDefault();
-  form.reset();
-}); //reset Form after Clicking on Submit-Button:
+//reset Form after Clicking on Submit-Button:
 //function addInputLogic()
 //if (buttonSubmit.addEventListener('click')) {
 //inputList.querySelector('input', reset)
@@ -214,16 +206,128 @@ form.addEventListener('submit', function (event) {
 // }
 // })
 //}
-//function delcaration: get, um querySelector in der constant declaration raus kürzen zu. können zu util.js verschoben werden
+},{"./utility":"src/js/utility.js"}],"src/js/bookmarks.js":[function(require,module,exports) {
+"use strict";
 
-function get(selector) {
-  return document.querySelector(selector);
-}
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.toggleBookmarks = toggleBookmarks;
 
-function getAll(selector) {
-  return document.querySelectorAll(selector);
+var _utility = require("./utility");
+
+//Constants for bookmarks on cards
+function toggleBookmarks() {
+  var bookmarkList = (0, _utility.getAll)('.card__bookmark');
+  bookmarkList.forEach(addBookmarkLogic);
+
+  function addBookmarkLogic(bookmark) {
+    bookmark === null || bookmark === void 0 ? void 0 : bookmark.addEventListener('click', function (event) {
+      event.stopPropagation();
+      bookmark.classList.toggle('card__bookmark--active');
+    });
+  }
 }
-},{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./utility":"src/js/utility.js"}],"src/js/nav.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.initNavigation = initNavigation;
+
+var _utility = require("./utility");
+
+function initNavigation() {
+  var navIcons = (0, _utility.getAll)('[data-js="nav-icon"]');
+  var pages = (0, _utility.getAll)('[data-js="page"]');
+  var headline = (0, _utility.get)('h1');
+  navIcons.forEach(function (icon) {
+    icon === null || icon === void 0 ? void 0 : icon.addEventListener('click', function () {
+      var iconName = icon.dataset.name; // display page
+
+      pages.forEach(function (oneOfAllPages) {
+        var pageName = oneOfAllPages.dataset.name;
+        oneOfAllPages.classList.toggle('display-none', pageName !== iconName);
+      }); // const activeIcon = get('.footer__icon--active')
+      // activeIcon?.classList.toggle('footer__icon--active')
+      // icon.classList.toggle('footer__icon--active')
+      // mark icon active
+
+      navIcons.forEach(function (oneOfAllIcons) {
+        var oneOfAllIconsName = oneOfAllIcons.dataset.name;
+        oneOfAllIcons.classList.toggle('footer__icon--active', oneOfAllIconsName === iconName);
+      }); // set headline text
+
+      headline.textContent = iconName;
+    });
+  });
+}
+/*
+//export function navBar() {
+  // constanten, die zum Inhalt (=body) der vier verschiedenen Screens führen
+  const pageHome = get('.page-questions')
+  const pageBookmarks = get('.page-bookmarks')
+  const pageCreate = get('.page-create')
+  const pageProfile = get('.page-profile')
+
+  //constanten, die die Eingabe-Buttons in der Navbar repräsentieren
+  const homeNav = get('.footer__icon--home')
+  const bookmarksNav = get('.footer__icon--bookmarks')
+  const createNav = get('.footer__icon--cards')
+  const profileNav = get('.footer__icon--profile')
+
+  //Funktion: Bei einem Click auf eins der Icons in der Nav-Bar soll der User zum entsprechenden Screen weiter geleitet werden
+  homeNav.addEventListener('click', () => {
+    pageHome.classList.remove('display-none')
+    pageBookmarks.classList.add('display-none')
+    pageCreate.classList.add('display-none')
+    pageProfile.classList.add('display-none')
+  })
+
+  bookmarksNav.addEventListener('click', () => {
+    pageHome.classList.add('display-none')
+    pageBookmarks.classList.remove('display-none')
+    pageCreate.classList.add('display-none')
+    pageProfile.classList.add('display-none')
+  })
+
+  createNav.addEventListener('click', () => {
+    pageHome.classList.add('display-none')
+    pageBookmarks.classList.add('display-none')
+    pageCreate.classList.remove('display-none')
+    pageProfile.classList.add('display-none')
+  })
+
+  profileNav.addEventListener('click', () => {
+    pageHome.classList.add('display-none')
+    pageBookmarks.classList.add('display-none')
+    pageCreate.classList.add('display-none')
+    pageProfile.classList.remove('display-none')
+  })
+}*/
+},{"./utility":"src/js/utility.js"}],"src/js/index.js":[function(require,module,exports) {
+"use strict";
+
+var _utility = require("./utility");
+
+var _cards = require("./cards");
+
+var _input = require("./input");
+
+var _bookmarks = require("./bookmarks");
+
+var _nav = require("./nav");
+
+document.addEventListener('DOMContentLoaded', function () {
+  setTimeout(function () {
+    (0, _cards.cardLogic)();
+    (0, _input.clearInput)();
+    (0, _bookmarks.toggleBookmarks)();
+    (0, _nav.initNavigation)();
+  });
+});
+},{"./utility":"src/js/utility.js","./cards":"src/js/cards.js","./input":"src/js/input.js","./bookmarks":"src/js/bookmarks.js","./nav":"src/js/nav.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -251,7 +355,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50054" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57549" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

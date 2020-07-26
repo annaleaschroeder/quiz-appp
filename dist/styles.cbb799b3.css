@@ -157,6 +157,16 @@ button {
   min-height: auto;
 }
 
+.footer__icon path {
+  color: darkblue;
+  fill: darkblue;
+}
+
+.footer__icon--active path {
+  color: black;
+  fill: black;
+}
+
 .profile {
   display: flex;
   justify-content: space-around;
