@@ -2,7 +2,7 @@
 import { get, getAll } from './utility'
 export function toggleBookmarks() {
   const bookmarkList = getAll('.card__bookmark')
-  bookmarkList.forEach(addBookmarkLogic)
+  bookmarkList?.forEach(addBookmarkLogic)
 
   function addBookmarkLogic(bookmark) {
     bookmark?.addEventListener('click', (event) => {

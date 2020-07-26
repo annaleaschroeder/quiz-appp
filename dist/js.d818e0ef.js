@@ -219,7 +219,7 @@ var _utility = require("./utility");
 //Constants for bookmarks on cards
 function toggleBookmarks() {
   var bookmarkList = (0, _utility.getAll)('.card__bookmark');
-  bookmarkList.forEach(addBookmarkLogic);
+  bookmarkList === null || bookmarkList === void 0 ? void 0 : bookmarkList.forEach(addBookmarkLogic);
 
   function addBookmarkLogic(bookmark) {
     bookmark === null || bookmark === void 0 ? void 0 : bookmark.addEventListener('click', function (event) {
@@ -242,7 +242,7 @@ function initNavigation() {
   var navIcons = (0, _utility.getAll)('[data-js="nav-icon"]');
   var pages = (0, _utility.getAll)('[data-js="page"]');
   var headline = (0, _utility.get)('h1');
-  navIcons.forEach(function (icon) {
+  navIcons === null || navIcons === void 0 ? void 0 : navIcons.forEach(function (icon) {
     icon === null || icon === void 0 ? void 0 : icon.addEventListener('click', function () {
       var iconName = icon.dataset.name; // display page
 
@@ -355,7 +355,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57549" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59961" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
