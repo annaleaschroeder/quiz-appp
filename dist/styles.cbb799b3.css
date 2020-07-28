@@ -158,8 +158,8 @@ button {
 }
 
 .footer__icon path {
-  color: darkblue;
-  fill: darkblue;
+  color: #2c212d;
+  fill: #2c212d;
 }
 
 .footer__icon--active path {

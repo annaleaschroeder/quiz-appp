@@ -3,7 +3,7 @@ import { get, getAll } from './utility'
 export function clearInput() {
   const form = get('form')
 
-  form.addEventListener('submit', function (event) {
+  form?.addEventListener('submit', (event) => {
     event.preventDefault()
     form.reset()
   })

@@ -5,7 +5,7 @@ export function initNavigation() {
   const pages = getAll('[data-js="page"]')
   const headline = get('h1')
 
-  navIcons?.forEach((icon) => {
+  navIcons.forEach((icon) => {
     icon?.addEventListener('click', () => {
       const iconName = icon.dataset.name
       // display page

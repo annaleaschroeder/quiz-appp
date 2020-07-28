@@ -133,37 +133,7 @@ function get(selector) {
 function getAll(selector) {
   return document.querySelectorAll(selector);
 }
-},{}],"src/js/cards.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.cardLogic = cardLogic;
-
-var _utility = require("./utility");
-
-function cardLogic() {
-  var cardList = (0, _utility.getAll)('.card');
-  cardList.forEach(addToggleLogic);
-
-  function addToggleLogic(card) {
-    var buttonAnswer = card.querySelector('.card__button--answer');
-    var buttonHide = card.querySelector('.card__button--hide-answer');
-    var answer = card.querySelector('.answer-text');
-    buttonAnswer.addEventListener('click', function () {
-      answer.classList.remove('display-none');
-      buttonAnswer.classList.add('display-none');
-      buttonHide.classList.remove('display-none');
-    });
-    buttonHide.addEventListener('click', function () {
-      buttonHide.classList.add('display-none');
-      answer.classList.add('display-none');
-      buttonAnswer.classList.remove('display-none');
-    });
-  }
-}
-},{"./utility":"src/js/utility.js"}],"src/js/input.js":[function(require,module,exports) {
+},{}],"src/js/input.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -175,7 +145,7 @@ var _utility = require("./utility");
 
 function clearInput() {
   var form = (0, _utility.get)('form');
-  form.addEventListener('submit', function (event) {
+  form === null || form === void 0 ? void 0 : form.addEventListener('submit', function (event) {
     event.preventDefault();
     form.reset();
   });
@@ -223,12 +193,168 @@ function toggleBookmarks() {
 
   function addBookmarkLogic(bookmark) {
     bookmark === null || bookmark === void 0 ? void 0 : bookmark.addEventListener('click', function (event) {
-      event.stopPropagation();
       bookmark.classList.toggle('card__bookmark--active');
     });
   }
 }
-},{"./utility":"src/js/utility.js"}],"src/js/nav.js":[function(require,module,exports) {
+},{"./utility":"src/js/utility.js"}],"src/js/arraycards.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.initCards = initCards;
+
+var _utility = require("./utility.js");
+
+var cards = [{
+  question: 'What does forEach do/',
+  answer: 'I iterates over an array etc.',
+  tags: ['js']
+}, {
+  question: 'Hallo ich bin eine Frage2',
+  answer: 'Ich bin eine Antwort2',
+  tags: ['tag 1', 'tag 2']
+}, {
+  question: 'Hallo ich bin eine Frage3',
+  answer: 'Ich bin eine Antwort3',
+  tags: ['tag 1', 'tag 2', 'tag 3', 'tag 4']
+}, {
+  question: 'Hallo ich bin eine Frage4',
+  answer: 'Ich bin eine Antwort4',
+  tags: ['tag 1', 'tag 2']
+}, {
+  question: 'Hallo ich bin eine Frage5',
+  answer: 'Ich bin eine Antwort5'
+}];
+
+function initCards() {
+  cards.forEach(createCard);
+}
+
+function createCard() {
+  var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+      question = _ref.question,
+      answer = _ref.answer,
+      _ref$tags = _ref.tags,
+      tags = _ref$tags === void 0 ? [] : _ref$tags;
+
+  var newCard = document.createElement('section');
+  newCard.className = 'card';
+  var target = (0, _utility.get)('[data-js=placeholder]');
+  target.appendChild(newCard);
+  var tagList = document.createElement('ul');
+  tagList.classList.add('card__tags');
+  tags.forEach(function (tag) {
+    var listItem = document.createElement('li');
+    listItem.classList.add('card__tag');
+    listItem.innerHTML = tag;
+    tagList.appendChild(listItem);
+  });
+  newCard.innerHTML =
+  /*html*/
+  "\n   \n    <svg\n            class=\"card__bookmark card__bookmark--active\"\n            xmlns=\"http://www.w3.org/2000/svg\"\n            height=\"24\"\n            viewBox=\"0 0 24 24\"\n            width=\"24\"\n          >\n            <path\n\n              d=\"M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z\"\n            />\n          </svg>\n\n   <h2 class=\"card__question\">Question</h2>\n    <p class=\"card__text\">\n      ".concat(question, "\n    </p>\n    <button class=\"card_button card__button--answer radius-5\">\n            Show Answer\n          </button>\n          <button\n            class=\"card_button card__button--hide-answer display-none radius-5\"\n          >\n            Hide Answer\n          </button>\n\n       <p class=\"answer-text display-none\">\n       ").concat(answer, "\n      </p>\n   \n  ");
+  newCard.appendChild(tagList);
+  addToggleLogic(newCard); // addBookmarkLogic(newCard)
+  //toggleBookmarks()
+} //cards.forEach(addBookmarkLogic)
+//export function addBookmarkLogic(card) {
+//function toggleBookmarks()
+//export function addBookmarkLogic(card) {
+// const bookmarkList = getAll('.card__bookmark')
+// bookmarkList.forEach((bookmark) => {
+//   bookmark?.addEventListener('click', () => {
+//     bookmark.classList.toggle('card__bookmark--active')
+//   })
+// })
+
+
+function addToggleLogic(card) {
+  var textShowAnswer = card.querySelector('.answer-text');
+  var buttonShowAnswer = card.querySelector('.card__button--answer');
+  buttonShowAnswer === null || buttonShowAnswer === void 0 ? void 0 : buttonShowAnswer.addEventListener('click', function () {
+    textShowAnswer.classList.toggle('display-none');
+    buttonShowAnswer.textContent = buttonShowAnswer.textContent === 'Hide answer' ? 'Show answer' : 'Hide answer';
+  });
+} // export function cardList() {
+//   const placeholder = get('[data-js=placeholder]')
+//   let card = [
+//     {
+//       type: 'h2',
+//       className: 'card__question',
+//       text: 'Question',
+//     },
+//     {
+//       type: 'paragraph',
+//       className: 'card__text',
+//       text:
+//         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, nesciunt adipisci? Quia voluptate voluptas harum eius vel, error qui natus ipsam. Natus nulla harum in quas sit dicta sequi facilis!',
+//     },
+//     {
+//       type: 'button',
+//       className: 'card_button card__button--answer radius-5',
+//       text: 'Show Answer',
+//     },
+//     {
+//       type: 'button',
+//       className: 'card_button card__button--hide-answer display-none radius-5',
+//       text: 'Hide Answer',
+//     },
+//     {
+//       type: 'paragraph',
+//       className: 'answer-text',
+//       text:
+//         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, exercitationem consectetur!',
+//     },
+//     {
+//       type: 'li',
+//       className: 'card__tag',
+//       text: 'tag 1',
+//     },
+//     {
+//       type: 'li',
+//       className: 'card__tag',
+//       text: 'tag 2',
+//     },
+//   ]
+//   //   cardCopy = [...copy]
+//   //   cardCopy.push(5)
+//   //   console.log(card, cardCopy)
+//   card.forEach(({ type, className, text }) => {
+//     const el = createElement({ type, className, target: placeholder })
+//     el.textContent = text
+//   })
+// repeat(createElement (), 5 {
+//   createElement();
+//   times=5 && times=--5 && repeat(createElement (), 5)
+// }
+// repeat(createElement () {document.createElement(type)}; }, 5;)
+//   //   Anna Idee
+//   //   const tagList = [
+//   //     {
+//   //       type: li,
+//   //       className: 'tag__list',
+//   //       text: 'Tag 1',
+//   //     },
+//   //     {
+//   //       type: 'paragraph',
+//   //       className: 'card__text',
+//   //       text:
+//   //         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, nesciunt adipisci? Quia voluptate voluptas harum eius vel, error qui natus ipsam. Natus nulla harum in quas sit dicta sequi facilis!',
+//   //     },
+//   createElement()
+//   function createElement({
+//     type = 'div',
+//     className = '',
+//     target = document.body,
+//   } = {}) {
+//     const el = document.createElement(type)
+//     el.className = className
+//     target.appendChild(el)
+//     return el
+//   }
+// }
+},{"./utility.js":"src/js/utility.js"}],"src/js/nav.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -242,7 +368,7 @@ function initNavigation() {
   var navIcons = (0, _utility.getAll)('[data-js="nav-icon"]');
   var pages = (0, _utility.getAll)('[data-js="page"]');
   var headline = (0, _utility.get)('h1');
-  navIcons === null || navIcons === void 0 ? void 0 : navIcons.forEach(function (icon) {
+  navIcons.forEach(function (icon) {
     icon === null || icon === void 0 ? void 0 : icon.addEventListener('click', function () {
       var iconName = icon.dataset.name; // display page
 
@@ -311,23 +437,26 @@ function initNavigation() {
 
 var _utility = require("./utility");
 
-var _cards = require("./cards");
-
 var _input = require("./input");
 
 var _bookmarks = require("./bookmarks");
 
+var _arraycards = require("./arraycards");
+
 var _nav = require("./nav");
 
+//import { cardLogic } from './cards'
+//import { cardList } from './arraycards'
 document.addEventListener('DOMContentLoaded', function () {
   setTimeout(function () {
-    (0, _cards.cardLogic)();
+    (0, _arraycards.initCards)(); // cardLogic()
+
     (0, _input.clearInput)();
     (0, _bookmarks.toggleBookmarks)();
-    (0, _nav.initNavigation)();
+    (0, _nav.initNavigation)(); // cardList()
   });
 });
-},{"./utility":"src/js/utility.js","./cards":"src/js/cards.js","./input":"src/js/input.js","./bookmarks":"src/js/bookmarks.js","./nav":"src/js/nav.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./utility":"src/js/utility.js","./input":"src/js/input.js","./bookmarks":"src/js/bookmarks.js","./arraycards":"src/js/arraycards.js","./nav":"src/js/nav.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -355,7 +484,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59961" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57453" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
